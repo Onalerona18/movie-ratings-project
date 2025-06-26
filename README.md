@@ -26,7 +26,7 @@ movie-ratings-project/
 ├── README.md # Project overview and documentation
 └── requirements.txt # Python dependencies
 
-## ⚙️ Tech Stack
+## Tech Stack
 - Python 3.13 – Core programming language used for data analysis
 - Pandas – For data loading and manipulation
 - NumPy – For numerical operations
