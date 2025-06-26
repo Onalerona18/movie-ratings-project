@@ -5,16 +5,39 @@ This project analyzes the MovieLens 100k dataset, which contains 100,000 ratings
 
 ## Project Structure
 movie-ratings-project/
-├── data/ # Dataset files (u.data, u.item, etc.)
-├── notebooks/ # Jupyter notebooks with code and analysis
-├── images/ # Visualizations (if any)
+├── .ipynb_checkpoints/ # Auto-saved Jupyter backups
 ├── .venv/ # Virtual environment
-├── .gitignore # Git ignore file
-├── README.md # This file
-├── requirements.txt # Python package dependencies
+├── data/ # Raw dataset files
+│ ├── u.data
+│ ├── u.genre
+│ ├── u.info
+│ ├── u.item
+│ ├── u.occupation
+│ └── u.user
+├── images/ # Visualisation (ERD diagram)
+│ └── average_rating_by_genre.png
+│ └── movie-erd.drawio.jpg
+├── notebooks/ # Jupyter notebooks for analysis
+│ ├── .ipynb_checkpoints/
+│ └── 01-data-exploration.ipynb
+├── .gitattributes 
+├── .gitignore 
+├── LICENSE
+├── README.md # Project overview and documentation
+└── requirements.txt # Python dependencies
+
+## ⚙️ Tech Stack
+- Python 3.13 – Core programming language used for data analysis
+- Pandas – For data loading and manipulation
+- NumPy – For numerical operations
+- Matplotlib & Seaborn – For data visualization
+- Draw.io (diagrams.net) – for creating the Entity-Relationship Diagram (ERD)
+- Jupyter Notebook – For interactive data exploration and presentation
+- VS Code – Primary code editor
+- Git – Version control
 
 ## Data Schema Design
-The MovieLens 100k dataset is represented using a simple relational schema with three main entities: `Users`, `Movies`, and `Ratings`.
+The MovieLens 100k dataset is represented using a simple relational schema with three main entities: `Users`, `Movies`, and `Ratings` inside the images/movie-erd.drawio.jpg folder.
 
 ### 1. Users Table
 Stores demographic information about each user.
@@ -36,9 +59,7 @@ Contains details about each movie, including its title and genre flags.
 | title        | String    | Movie title                            |
 | release_date | String    | Date the movie was released            |
 | imdb_url     | String    | Link to IMDb page                      |
-| genre flags  | Binary    | Multiple columns (0/1) for each genre  |
-
-*Note: Each movie can belong to multiple genres. Genre columns are binary (1 = belongs to genre, 0 = does not).*
+| genre flags  | Binary    | Multiple columns (0/1) for each genre  |.*
 
 ### 3. Ratings Table
 Contains user-generated movie ratings.
@@ -55,7 +76,7 @@ Contains user-generated movie ratings.
 - `user_id` and `movie_id` in the Ratings table are foreign keys referencing `Users.user_id` and `Movies.movie_id`.
 
 ## Key Findings
-1. Top 5 Movies by Average Rating (with at least 50 ratings):
+1. Top 5 Movies by Average Rating with at least 50 ratings:
 
 | Title                              | Average Rating | Number of Ratings |
 |-----------------------------------|----------------|-------------------|
@@ -88,10 +109,11 @@ Contains user-generated movie ratings.
 | Horror      | 3.29           |
 | Fantasy     | 3.22           |
 | unknown     | 3.20           |
+![Average Rating by Genre](images/average_rating_by_genre.png)
 
 3. Average Rating by Gender:
-- Female users gave an average rating of **3.53**  
-- Male users gave an average rating of **3.53**
+- Female users gave an average rating of 3.531507
+- Male users gave an average rating of 3.529289
 
 4. Number of Users in Each Age Group:
 
@@ -108,18 +130,18 @@ Users with occupations such as unemployed (3.78), lawyer (3.74), and doctor (3.6
 
 6. Most Rated Movies:
 
-| Movie Title             | Number of Ratings |
-|------------------------|-------------------|
-| Star Wars (1977)       | 583               |
-| Contact (1997)         | 509               |
-| Fargo (1996)           | 508               |
-| Return of the Jedi (1983)| 507             |
-| Liar Liar (1997)       | 485               |
-| English Patient, The (1996) | 481          |
-| Scream (1996)          | 478               |
-| Toy Story (1995)       | 452               |
-| Air Force One (1997)   | 431               |
-| Independence Day (1996)| 429               |
+| Movie Title                 | Number of Ratings |
+|-----------------------------|-------------------|
+| Star Wars (1977)            | 583               |
+| Contact (1997)              | 509               |
+| Fargo (1996)                | 508               |
+| Return of the Jedi (1983)   | 507               |
+| Liar Liar (1997)            | 485               |
+| English Patient, The (1996) | 481               |
+| Scream (1996)               | 478               |
+| Toy Story (1995)            | 452               |
+| Air Force One (1997)        | 431               |
+| Independence Day (1996)     | 429               |
 
 ## How to Run This Project
 1. Clone the repository  
@@ -138,3 +160,7 @@ Users with occupations such as unemployed (3.78), lawyer (3.74), and doctor (3.6
 Install dependencies with:
 ```bash
 pip install -r requirements.txt
+
+## License
+This project is licensed under the MIT License.  
+See the [LICENSE](LICENSE) file for more details.
