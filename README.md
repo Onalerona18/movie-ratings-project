@@ -65,7 +65,7 @@ Contains user-generated movie ratings.
 | Casablanca (1942)                 | 4.46           | 243               |
 | Wallace & Gromit: Best of Aardman | 4.45           | 67                |
 
-2. **Most Liked Genres by Average Rating:**
+2. Most Liked Genres by Average Rating:
 
 | Genre       | Average Rating |
 |-------------|----------------|
@@ -89,12 +89,11 @@ Contains user-generated movie ratings.
 | Fantasy     | 3.22           |
 | unknown     | 3.20           |
 
-3. **Average Rating by Gender:**
-
+3. Average Rating by Gender:
 - Female users gave an average rating of **3.53**  
 - Male users gave an average rating of **3.53**
 
-4. **Number of Users in Each Age Group:**
+4. Number of Users in Each Age Group:
 
 | Age Group | Number of Users |
 |-----------|-----------------|
@@ -104,11 +103,10 @@ Contains user-generated movie ratings.
 | 46-60     | 174             |
 | 60+       | 31              |
 
-5. **Average Rating by Occupation:**
+5. Average Rating by Occupation:
+Users with occupations such as unemployed (3.78), lawyer (3.74), and doctor (3.69) tend to give higher average movie ratings. Occupations like healthcare (2.90), homemaker (3.30), and executive (3.35) rate movies comparatively lower on average. This suggests that different professional backgrounds may influence movie rating behavior.
 
-Users with occupations such as **unemployed (3.78)**, **lawyer (3.74)**, and **doctor (3.69)** tend to give higher average movie ratings. Occupations like **healthcare (2.90)**, **homemaker (3.30)**, and **executive (3.35)** rate movies comparatively lower on average. This suggests that different professional backgrounds may influence movie rating behavior.
-
-6. **Most Rated Movies:**
+6. Most Rated Movies:
 
 | Movie Title             | Number of Ratings |
 |------------------------|-------------------|
@@ -123,20 +121,14 @@ Users with occupations such as **unemployed (3.78)**, **lawyer (3.74)**, and **d
 | Air Force One (1997)   | 431               |
 | Independence Day (1996)| 429               |
 
----
-
 ## How to Run This Project
-
 1. Clone the repository  
 2. Create and activate the virtual environment  
 3. Install dependencies from `requirements.txt`  
 4. Open the Jupyter notebook in `notebooks/` to explore the analyses step-by-step  
 5. Place data files in the `data/` folder  
 
----
-
 ## Dependencies
-
 - Python 3.x  
 - pandas  
 - matplotlib  
@@ -144,6 +136,5 @@ Users with occupations such as **unemployed (3.78)**, **lawyer (3.74)**, and **d
 - Jupyter Notebook
 
 Install dependencies with:
-
 ```bash
 pip install -r requirements.txt
