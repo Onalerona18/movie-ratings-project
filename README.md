@@ -150,6 +150,10 @@ Users with occupations such as unemployed (3.78), lawyer (3.74), and doctor (3.6
 4. Open the Jupyter notebook in `notebooks/` to explore the analyses step-by-step  
 5. Place data files in the `data/` folder  
 
+## License
+This project is licensed under the MIT License.  
+See the [LICENSE](LICENSE) file for more details.
+
 ## Dependencies
 - Python 3.x  
 - pandas  
@@ -160,7 +164,3 @@ Users with occupations such as unemployed (3.78), lawyer (3.74), and doctor (3.6
 Install dependencies with:
 ```bash
 pip install -r requirements.txt
-
-## License
-This project is licensed under the MIT License.  
-See the [LICENSE](LICENSE) file for more details.
